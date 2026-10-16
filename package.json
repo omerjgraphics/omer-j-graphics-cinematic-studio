@@ -1,0 +1,24 @@
+{
+  "name": "omer-j-graphics-cinematic-studio",
+  "version": "0.2.0",
+  "description": "OMER J GRAPHICS Cinematic Creative Studio UI prototype and Electron desktop starter",
+  "main": "src/main.js",
+  "author": "OMER J GRAPHICS",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.omerjgraphics.cinematicstudio",
+    "productName": "OMER J GRAPHICS Cinematic Studio",
+    "directories": { "output": "dist" },
+    "files": ["index.html", "assets/**/*", "src/**/*", "package.json"],
+    "win": { "target": ["nsis"] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
